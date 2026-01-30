@@ -129,7 +129,7 @@ import Landing from "./pages/Landing";
 import Signup from "./pages/Signup";
 
 // ✅ new public pages you created
-import Usecases from "./pages/usecases";
+// import Usecases from "./pages/usecases";
 import Docs from "./pages/Docs";
 import Pricing from "./pages/Pricing";
 import ContactSales from "./pages/Contactsales";
@@ -154,7 +154,7 @@ export default function App() {
         <Route path="/" element={<Landing />} />
 
         {/* ✅ Public pages */}
-        <Route path="/use-cases" element={<Usecases />} />
+        {/* <Route path="/use-cases" element={<Usecases />} /> */}
         <Route path="/docs" element={<Docs />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/contact-sales" element={<ContactSales />} />

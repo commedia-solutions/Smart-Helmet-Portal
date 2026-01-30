@@ -1242,7 +1242,7 @@ export default function Alerts() {
 
   // right-sidebar stats (simple mapping from alert rows -> health buckets)
   // Triggered => Moderate, Failed => Critical (keeps your existing chart vibe)
-  const healthLabels = ["Healthy", "Moderate", "Critical"] as const;
+  
   const healthData = useMemo(() => {
     const counts: Record<string, number> = { Healthy: 0, Moderate: 0, Critical: 0 };
 

@@ -184,15 +184,15 @@
 // `;
 
 // src/Components/HeroSection.tsx
-import React from "react";
+
 import { useNavigate } from "react-router-dom";
 import smartHelmetImg from "../assets/Smarthelmet.png"; // ✅ make sure filename matches exactly
 
 const HeroSection = () => {
   const navigate = useNavigate();
-  const token = localStorage.getItem("idToken");
+  
 
-  const dashboardTo = token ? "/dashboard" : "/login";
+  
 
   return (
     <section id="dashboard" className="hero">

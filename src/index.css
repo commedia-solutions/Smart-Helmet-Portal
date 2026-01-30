@@ -1,0 +1,105 @@
+/* src/index.css */
+
+/* ✅ Sansation (global) */
+@import url("https://fonts.googleapis.com/css2?family=Sansation:wght@300;400;700&display=swap");
+
+/* ✅ Allow page scrolling + keep dark base */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background-color: #121212; /* base fallback */
+  background-image: radial-gradient(
+      circle at top left,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(0, 0, 0, 0.15) 20%,
+      transparent 60%
+    ),
+    linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Optional: nicer scrolling on modern browsers */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ✅ Global typography + dark UI baseline */
+:root {
+  font-family: "Sansation", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  /* ✅ DO NOT lock overflow here */
+}
+
+/* ✅ Remove any default flex-centering issues */
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Links */
+a {
+  font-weight: 400; /* ✅ lighter */
+  color: #8b5cf6;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #22d3ee;
+}
+
+/* Buttons (keep inherit font, lighter default weight) */
+button {
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 600; /* ✅ subtle, not too bold */
+  font-family: inherit;
+  background-color: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s, transform 0.15s ease;
+}
+button:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  background-color: rgba(255, 255, 255, 0.09);
+  transform: translateY(-1px);
+}
+button:focus,
+button:focus-visible {
+  outline: 3px solid rgba(255, 234, 0, 0.25); /* ✅ match your yellow vibe */
+  outline-offset: 2px;
+}
+
+/* ✅ Keep dark even if OS is light */
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+/* ✅ Let page components control their own background */
+body {
+  background: #05060a;
+  background-image: none !important;
+}

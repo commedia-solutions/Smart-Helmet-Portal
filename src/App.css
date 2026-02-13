@@ -1,0 +1,14 @@
+/* src/App.css */
+
+/* ✅ App.css should not control layout for full-page routes */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional helpers (safe) */
+* {
+  box-sizing: border-box;
+}

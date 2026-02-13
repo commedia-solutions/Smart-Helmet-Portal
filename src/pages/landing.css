@@ -1,0 +1,190 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.landing-container {
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #2d2d2d;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 56px; /* ✅ reduced */
+}
+
+.navbar-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+/* Logo Section */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  margin-right: 24px; /* ✅ reduced */
+  gap: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* ✅ Logo image (replaces emoji) */
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Keep if you still use emoji somewhere else */
+.logo-icon {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* ✅ Vertical divider between brand and links */
+.nav-divider {
+  width: 1px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.12);
+  margin-left: 18px;
+}
+
+/* Center Navigation */
+.navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  flex: 1;
+  margin-left: 0; /* ✅ removed extra shift */
+}
+
+.nav-link {
+  color: #d4d4d4;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  /* color: #ffffff; */
+  color: #ede43a;
+}
+
+/* Right Section - Buttons */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 32px;
+}
+
+.btn-signin {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #3d3d3d;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-signin:hover {
+  background-color: #2d2d2d;
+  border-color: #4d4d4d;
+}
+
+.btn-signup:focus,
+.btn-signup:focus-visible,
+.btn-signup:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-signup {
+  /* background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%); */
+  background: linear-gradient(135deg, #ede43a 0%, #fff41f 100%);
+  color: #ffffff;
+  border: none;
+  padding: 9px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+ 
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  
+}
+
+.btn-signup:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(237, 234, 58, 0.502);
+}
+
+.btn-signup {
+  color: #000; /* or #0b0b0d */
+  font-weight: 400;
+}
+
+
+/* Main Content */
+.main-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar-center {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-content {
+    padding: 0 16px;
+  }
+
+  .navbar-center {
+    display: none;
+  }
+
+  .navbar-right {
+    margin-left: auto;
+  }
+}

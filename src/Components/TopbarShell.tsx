@@ -308,7 +308,7 @@
 // };
 
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Typography,
@@ -320,7 +320,7 @@ import {
   Avatar,
   Button,
 } from "@mui/material";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
@@ -331,26 +331,26 @@ import PersonAddOutlinedIcon from "@mui/icons-material/PersonAddOutlined";
 const TOPBAR_H = 52;
 const ACCENT = "#FED200";
 
-const TITLE_MAP: Record<string, string> = {
-  "/dashboard": "Dashboard",
-  "/faults": "Faults",
-  "/alerts": "Alerts",
-  "/reports": "Reports",
-  "/iam": "IAM",
-  "/users": "Users",
-  "/locations": "Locations",
-  "/profile": "User Profile",
-};
+// const TITLE_MAP: Record<string, string> = {
+//   "/dashboard": "Dashboard",
+//   "/faults": "Faults",
+//   "/alerts": "Alerts",
+//   "/reports": "Reports",
+//   "/iam": "IAM",
+//   "/users": "Users",
+//   "/locations": "Locations",
+//   "/profile": "User Profile",
+// };
 
 export default function TopbarShell() {
-  const location = useLocation();
+  // const location = useLocation();
   const navigate = useNavigate();
 
-  const title = useMemo(() => {
-    if (TITLE_MAP[location.pathname]) return TITLE_MAP[location.pathname];
-    const key = Object.keys(TITLE_MAP).find((k) => location.pathname.startsWith(k));
-    return key ? TITLE_MAP[key] : "Dashboard";
-  }, [location.pathname]);
+  // const title = useMemo(() => {
+  //   if (TITLE_MAP[location.pathname]) return TITLE_MAP[location.pathname];
+  //   const key = Object.keys(TITLE_MAP).find((k) => location.pathname.startsWith(k));
+  //   return key ? TITLE_MAP[key] : "Dashboard";
+  // }, [location.pathname]);
 
   const [helmetSearch, setHelmetSearch] = useState("");
 
